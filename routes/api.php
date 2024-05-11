@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BuildingController;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+// Rotas de autenticação
+Route::post('login', [AuthController::class, 'login']);
+Route::post('logout', [AuthController::class, 'logout']);
+
+Route::middleware('jwt.auth')->group(function () {
+    
+    Route::apiResource('buildings', BuildingController::class);
+    Route::apiResource('tasks', TaskController::class);
+
+    Route::post('tasks/{id}/comment', [TaskController::class, 'comment']);
 });
+
+

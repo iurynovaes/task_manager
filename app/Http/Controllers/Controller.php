@@ -9,4 +9,6 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
+
+    const USER_ERROR_CODE = 20;
 }
