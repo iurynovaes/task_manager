@@ -24,4 +24,9 @@ Execute the following steps to run the application successfully after cloning th
 
 **URL Base**: http://localhost:8000/api
 
+**Test User**
+
+Email: test@test.com
+Password: test123
+
 You can found a file to import the requests into Insomnia in /public/utils/Insomnia_TaskManager
