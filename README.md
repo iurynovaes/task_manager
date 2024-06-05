@@ -29,4 +29,4 @@ Execute the following steps to run the application successfully after cloning th
 Email: test@test.com
 Password: test123
 
-You can found a file to import the requests into Insomnia in /public/utils/Insomnia_TaskManager
+You can find a file to import the requests into Insomnia in /public/utils/Insomnia_TaskManager
